@@ -70,22 +70,15 @@ export const feedback = [
   },
 ];
 
-export const stats = [
+export const specs = [
   {
-    id: "stats-1",
-    title: "User Active",
-    value: "3800+",
+    id: "specs-1",
+    title: "May 22nd, 2023, 4:30 PM",
   },
   {
-    id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
-  },
-  {
-    id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
-  },
+    id: "specs-2",
+    title: "Lindley Scott House, Azusa, CA, USA",
+  }
 ];
 
 export const footerLinks = [
