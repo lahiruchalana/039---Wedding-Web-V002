@@ -1,5 +1,7 @@
 import { apple, bill, google } from "../assets";
 import styles, { layout } from "../style";
+import Button from "./Button";
+
 
 const Billing = () => (
   <section id="product" className={layout.sectionReverse}>
@@ -14,8 +16,7 @@ const Billing = () => (
 
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        Easily control your <br className="sm:block hidden" /> billing &
-        invoicing
+        Reception.. <br className="sm:block hidden" />
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio
@@ -27,6 +28,9 @@ const Billing = () => (
         <img src={apple} alt="google_play" className="w-[128.86px] h-[42.05px] object-contain mr-5 cursor-pointer" />
         <img src={google} alt="google_play" className="w-[144.17px] h-[43.08px] object-contain cursor-pointer" />
       </div>
+
+      <Button styles={`mt-10`} buttonName={`Google Map Location`} />
+
     </div>
   </section>
 );
