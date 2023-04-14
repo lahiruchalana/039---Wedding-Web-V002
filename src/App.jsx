@@ -1,5 +1,6 @@
 import styles from "./style";
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
+import { Billing, Business, OurStory, CTA, Footer, Navbar, Stats, Hero } from "./components";
+
 
 const App = () => (
   <div className="bg-violet-950 w-full overflow-hidden">
@@ -9,7 +10,7 @@ const App = () => (
       </div>
     </div>
 
-    <div className={`bg-violet-950 ${styles.flexStart}`}>
+    <div className={`bg-violet-950 ${styles.paddingX} ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
         <Hero />
       </div>
@@ -18,9 +19,10 @@ const App = () => (
     <div className={`bg-violet-950 ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <Stats />
-        <Business />
         <Billing />
-        <CardDeal />
+        <Business />
+        <OurStory />
+        {/* <CardDeal /> */}
         {/* <Testimonials /> */}
         {/* <Clients /> */}
         <CTA />
