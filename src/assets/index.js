@@ -26,7 +26,7 @@ import people03 from "./people03.png";
 import couple001 from "./couple001.jpg";
 import couple002 from "./couple002.jpg";
 import couple003 from "./couple003.jpg";
-import coupleAlbum from "./coupleAlbum.png"
+import coupleAlbum from "./coupleAlbum.jpg"
 
 export {
   airbnb,
