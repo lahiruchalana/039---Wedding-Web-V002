@@ -4,7 +4,7 @@ import Button from "./Button";
 
 
 const Billing = () => (
-  <section id="product" className={layout.sectionReverse}>
+  <section id="ceremony" className={layout.sectionReverse}>
     <div className={layout.sectionImgReverse}>
         <img src={couple002} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
 

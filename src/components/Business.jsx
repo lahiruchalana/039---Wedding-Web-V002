@@ -3,7 +3,7 @@ import Button from "./Button";
 import { couple003 } from "../assets";
 
 const Business = () =>  (
-  <section id="features" className={layout.section}>
+  <section id="reception" className={layout.section}>
 
     <div className={layout.sectionInfo} >
       <h2 className={styles.heading2}>
