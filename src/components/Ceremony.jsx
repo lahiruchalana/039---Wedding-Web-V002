@@ -1,9 +1,9 @@
 import { couple002 } from "../assets";
 import styles, { layout } from "../style";
-import Button from "./Button";
+import Button from "./buttons/Button";
 
 
-const Billing = () => (
+const Ceremony = () => (
   <section id="ceremony" className={layout.sectionReverse}>
     <div className={layout.sectionImgReverse}>
         <img src={couple002} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
@@ -36,4 +36,4 @@ const Billing = () => (
   </section>
 );
 
-export default Billing;
+export default Ceremony;

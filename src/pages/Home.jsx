@@ -1,5 +1,5 @@
 import styles from "./../style";
-import { Billing, Business, OurStory, CTA, Footer, Navbar, Stats, Hero } from "./../components";
+import { Ceremony, Reception, OurStory, RSVP, Footer, Navbar, DateVenue, Hero } from "./../components";
 
 
 const Home = () => (
@@ -18,11 +18,11 @@ const Home = () => (
     
     <div className={`bg-violet-950 ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
-        <Stats />
-        <Billing />
-        <Business />
+        <DateVenue />
+        <Ceremony />
+        <Reception />
         <OurStory />
-        <CTA />
+        <RSVP />
         <Footer />
       </div>
     </div>
