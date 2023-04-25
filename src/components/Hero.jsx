@@ -1,6 +1,5 @@
 import styles from "../style";
 import { couple001 } from "../assets";
-import GetStarted from "./GetStarted";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -48,7 +47,6 @@ const Hero = () => {
         </div>
 
         <div className={`ss:hidden ${styles.flexCenter}`}>
-          <GetStarted />
         </div>
       </AnimatePresence>
     </section>

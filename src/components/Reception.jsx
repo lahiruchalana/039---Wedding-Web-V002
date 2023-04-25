@@ -1,8 +1,8 @@
 import styles, { layout } from "../style";
-import Button from "./Button";
+import Button from "./buttons/Button";
 import { couple003 } from "../assets";
 
-const Business = () =>  (
+const Reception = () =>  (
   <section id="reception" className={layout.section}>
 
     <div className={layout.sectionInfo} >
@@ -38,4 +38,4 @@ const Business = () =>  (
   </section>
 );
 
-export default Business;
+export default Reception;

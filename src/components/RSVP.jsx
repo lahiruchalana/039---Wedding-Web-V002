@@ -1,7 +1,7 @@
 import styles from "../style";
-import ButtonViolet from "./ButtonViolet";
+import ButtonViolet from "./buttons/ButtonViolet";
 
-const CTA = () => {
+const RSVP = () => {
   return(
     <section id="rsvp" className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% rounded-[20px] box-shadow`}>
       <div className="flex-1 flex flex-col">
@@ -18,4 +18,4 @@ const CTA = () => {
   )
 }
 
-export default CTA;
+export default RSVP;
