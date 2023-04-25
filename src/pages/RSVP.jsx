@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { config } from '../../firebaseConfig.js';
+import styles from "./../style";
+
+import { motion, AnimatePresence } from "framer-motion";
+
 // import { initializeApp } from '/node_modules/.vite/deps/firebase_app.js?v=c4e2b1a8';
 // import { database } from 'firebase/database';
 // import 'firebase/database';
@@ -32,10 +36,23 @@ const db = getDatabase(app);
 
 
 function RSVP() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [attending, setAttending] = useState(false);
-  const [guests, setGuests] = useState(0);
+  // const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [attending, setAttending] = useState(false);
+  // const [guests, setGuests] = useState(0);
+
+  const [name, setName] = useState("");
+  const [isAttending, setIsAttending] = useState(false);
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleAttendingChange = (event) => {
+    setIsAttending(event.target.checked);
+  };
+
+
 
   // useEffect(() => {
   //   // Load initial data from Firebase
@@ -66,46 +83,44 @@ function RSVP() {
   };
 
   return (
-    <div>
-      <h1>RSVP</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
-
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-        />
-
-        <label htmlFor="attending">Attending:</label>
-        <input
-          type="checkbox"
-          id="attending"
-          checked={attending}
-          onChange={e => setAttending(e.target.checked)}
-        />
-
-        <label htmlFor="guests">Number of guests:</label>
-        <input
-          type="number"
-          id="guests"
-          min="0"
-          value={guests}
-          onChange={e => setGuests(parseInt(e.target.value))}
-        />
-
-        <button type="submit">Submit</button>
-      </form>
+    <div className={`bg-violet-950 ${styles.paddingX} ${styles.flexStart}`}>
+      <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-3xl font-bold mb-4">RSVP</h1>
+        <form className="flex flex-col items-center">
+          <label htmlFor="name" className="font-bold mb-2">
+            Name:
+          </label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={handleNameChange}
+            className="border border-gray-400 px-2 py-1 mb-4 rounded-md"
+          />
+          <label htmlFor="attending" className="font-bold mb-2">
+            Will you be attending?
+          </label>
+          <input
+            type="checkbox"
+            id="attending"
+            checked={isAttending}
+            onChange={handleAttendingChange}
+            className="mx-2"
+          />
+          <label htmlFor="attending">Yes</label>
+          <button
+            type="submit"
+            className="bg-blue-500 text-white px-4 py-2 mt-4 rounded-md"
+            onClick={(e) => e.preventDefault()}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
 
 export default RSVP;
+
+
